@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assests/logo.png">
+    <title>Video-Call</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./assests/style.css">
+</head>
+<body>
+  <div id="userName">
+    <input id="userNameInput" type="text" name="username" placeholder="Enter Your Name">
+
+    <button onclick="login()" class="actionButton">Login</button>
+  </div>  
+
+  <div id="userInfo">
+    <h1 class="InfoHeading">Hello<span id="nameHere">Alimxon</span></h1>
+  </div>
+
+  <div id="call">
+    <div class="dialWrapper">
+        <input type="text" id="callName"placeholder="Whom to call" name="callName">
+        <button onclick="call()" class="actionButton">Call</button>
+    </div>
+ </div>
+
+<div id="answer">
+    <div class="dialWrapper">
+        <h2 class="infoHeading">Incomming Call</h2>
+        <img src="./assests/profile.png" alt="" id="profileImageA">
+        <h2 class="infoHeading"><span id="callerName">Behruz</span></h2>
+        <button onclick="answer()" class="actionButton">Answer</button>
+    </div>
+</div>
+
+<div id="calling">
+    <div class="dialWrapper">
+        <h2 class="infoHeading">Calling</h2>
+        <img src="./assests/profile.png" alt="profile" id="profileImageCA">
+        <h3 id="infoHeading"><span id="otherUserNameCA">Behruz</span></h3>
+    </div>
+</div>
+
+<div id="inCall">
+    <div class="dialWrapper">
+        <h3 class="infoHeading">On Call With</h3>
+        <h2 class="infoHeading"><span id="otherUserNameC">Alimxon</span></h2>
+    </div>
+</div>
+
+<div id="videos">
+    <div id="localVideoDiv">
+        <video width="200px" id="remoteVideo" autoplay muted playsline></video>
+    </div>
+</div>
+<div id="remoteVideoDiv">
+    <video width="500px" id="remoteVideo"autoplay  playsline></video>
+</div>
+
+<script src="./assests/main.js"></script>
+</body>
+</html>
